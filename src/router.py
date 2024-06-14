@@ -23,3 +23,8 @@ async def add_task(
 async def get_tasks() -> list[STask]:
     tasks = await TaskRepository.get_tasks()
     return tasks
+
+
+@router.get("/homes")
+async def get_home():
+    return {"Hello": "World"}
